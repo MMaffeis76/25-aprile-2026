@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Aprile: La Resistenza fu fenomeno di popolo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #2d3436 !important;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 0 40px 0;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #c0392b 0%, #922b21 60%, #5d1a15 100%);
+            color: #ffffff !important;
+            padding: 36px 24px 32px;
+            text-align: center;
+        }
+
+        .header-label {
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #f5b7b1 !important;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .header-emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 1.55em;
+            font-weight: 800;
+            color: #ffffff !important;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        .header .subtitle {
+            font-size: 0.95em;
+            font-style: italic;
+            color: #f5cba7 !important;
+            line-height: 1.5;
+        }
+
+        .date-badge {
+            display: inline-block;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.18);
+            color: #ffffff !important;
+            font-size: 0.8em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* CONTENT AREA */
+        .content {
+            padding: 20px 16px 0;
+        }
+
+        /* CONTEXT BOX */
+        .context-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+            border-left: 5px solid #f39c12;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .context-box .box-title {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: #856404 !important;
+            margin-bottom: 10px;
+        }
+
+        .context-box p {
+            font-size: 0.92em;
+            color: #5d4037 !important;
+            line-height: 1.65;
+        }
+
+        .context-box p + p {
+            margin-top: 8px;
+        }
+
+        /* SECTIONS */
+        .section {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            border-left: 5px solid #667eea;
+        }
+
+        .section.red    { border-left-color: #e74c3c; }
+        .section.green  { border-left-color: #27ae60; }
+        .section.purple { border-left-color: #8e44ad; }
+        .section.orange { border-left-color: #e67e22; }
+        .section.dark   { border-left-color: #2d3436; }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .section-emoji {
+            font-size: 1.8em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .section-title {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #2d3436 !important;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: 0.82em;
+            color: #636e72 !important;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .section p {
+            font-size: 0.93em;
+            color: #2d3436 !important;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* QUOTE */
+        .quote {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 14px 0;
+            font-style: italic;
+            color: #856404 !important;
+            font-size: 0.93em;
+            line-height: 1.65;
+        }
+
+        .quote strong {
+            display: block;
+            margin-top: 8px;
+            font-style: normal;
+            font-size: 0.82em;
+            color: #a0522d !important;
+        }
+
+        /* STORY BOX - partigiane */
+        .story-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .story-box .story-title {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: #6d4c12 !important;
+            margin-bottom: 10px;
+        }
+
+        .story-box p {
+            font-size: 0.93em;
+            color: #4a3000 !important;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .story-box p:last-child { margin-bottom: 0; }
+
+        /* STAT GRID */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stat-card .stat-emoji {
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stat-card .stat-number {
+            font-size: 1.3em;
+            font-weight: 800;
+            color: #c0392b !important;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.78em;
+            color: #636e72 !important;
+            margin-top: 4px;
+            line-height: 1.35;
+        }
+
+        /* WORD CLOUD */
+        .word-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0;
+        }
+
+        .word-tag {
+            padding: 6px 13px;
+            border-radius: 20px;
+            font-size: 0.82em;
+            font-weight: 600;
+            color: #ffffff !important;
+        }
+
+        .tag-red    { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+        .tag-blue   { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .tag-green  { background: linear-gradient(135deg, #27ae60, #1a7a42); }
+        .tag-orange { background: linear-gradient(135deg, #e67e22, #d35400); }
+        .tag-dark   { background: linear-gradient(135deg, #636e72, #2d3436); }
+
+        /* QUESTION BOX */
+        .question-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 14px;
+            padding: 24px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.35);
+        }
+
+        .question-box .q-emoji {
+            font-size: 2.2em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .question-box p {
+            color: #ffffff !important;
+            font-size: 1em;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .question-box .q-label {
+            display: inline-block;
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #d4b8ff !important;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* DIVIDER */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #dfe6e9, transparent);
+            margin: 6px 0 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #2d3436;
+            color: #b2bec3 !important;
+            padding: 24px 20px;
+            text-align: center;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .footer p {
+            font-size: 0.85em;
+            color: #b2bec3 !important;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #74b9ff !important;
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 0.82em;
+        }
+
+        .footer .firma {
+            margin-top: 16px;
+            font-size: 0.9em;
+            color: #dfe6e9 !important;
+            font-style: italic;
+        }
+
+        .footer .rassegna-label {
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #636e72 !important;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* HIGHLIGHT inline */
+        .hl {
+            background: #ffeaa7;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436 !important;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.3em; }
+            .stat-grid { grid-template-columns: 1fr 1fr; }
+            .content { padding: 14px 12px 0; }
+            .section { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-label">Rassegna Stampa</div>
+        <span class="header-emoji">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" width="72" height="48" style="border-radius:4px; display:inline-block; box-shadow:0 2px 8px rgba(0,0,0,0.35);">
+                <rect width="1" height="2" fill="#009246"/>
+                <rect x="1" width="1" height="2" fill="#ffffff"/>
+                <rect x="2" width="1" height="2" fill="#ce2b37"/>
+            </svg>
+        </span>
+        <h1>«La Resistenza fu fenomeno di popolo»</h1>
+        <p class="subtitle">Lo storico Paolo Pezzino racconta chi fu davvero il 25 Aprile:<br>non un mito, ma milioni di persone in carne e ossa</p>
+        <span class="date-badge">25 aprile 2026 · 81° anniversario della Liberazione</span>
+    </div>
+
+    <div class="content">
+
+        <!-- CONTESTO STORICO -->
+        <div class="context-box" style="margin-top: 20px;">
+            <div class="box-title">📚 Contesto storico — per capire di cosa parliamo</div>
+            <p><strong>8 settembre 1943</strong>: l'Italia firma l'armistizio con gli Alleati. L'esercito si scioglie nel caos. I tedeschi occupano il Nord e il Centro del paese. Nasce la Repubblica Sociale Italiana (RSI), lo Stato fantoccio di Mussolini sotto Hitler, con capitale a Salò: è la cosiddetta <span class="hl">Repubblica di Salò</span>.</p>
+            <p>Dall'altra parte nasce la <strong>Resistenza</strong>: partigiani di ogni estrazione sociale — operai, studenti, sacerdoti, donne, intellettuali — che combattono contro nazisti e fascisti. <strong>25 aprile 1945</strong>: l'insurrezione generale libera le grandi città del Nord. L'Italia è libera. Da lì nascerà la Repubblica.</p>
+        </div>
+
+        <!-- CHI È PEZZINO -->
+        <div class="section dark">
+            <div class="section-header">
+                <span class="section-emoji">🎓</span>
+                <div>
+                    <div class="section-title">Chi parla: Paolo Pezzino</div>
+                    <div class="section-subtitle">Storico, università di Pisa · già presidente Istituto Ferruccio Parri</div>
+                </div>
+            </div>
+            <p>Paolo Pezzino è uno dei più autorevoli storici italiani della Resistenza. Ha appena pubblicato <em>«Andare per i luoghi della Resistenza»</em> (Il Mulino), un libro che racconta — attraverso luoghi, storie e nomi — chi erano davvero le persone che scelsero di opporsi al nazifascismo. Non eroi astratti: persone concreti, con un mestiere, una famiglia, una paura da vincere.</p>
+        </div>
+
+        <!-- LA RESISTENZA COME FENOMENO DI POPOLO -->
+        <div class="section red">
+            <div class="section-header">
+                <span class="section-emoji">✊</span>
+                <div>
+                    <div class="section-title">Non un mito, ma una lotta di tutti</div>
+                    <div class="section-subtitle">Chi partecipò davvero alla Resistenza?</div>
+                </div>
+            </div>
+            <p>Pezzino smonta l'idea che la Resistenza fosse roba da pochi eroi o da una sola parte politica. Fu una mobilitazione trasversale: <span class="hl">comunisti, liberali, cattolici, azionisti</span>. Mondi lontanissimi, uniti dall'opposizione al nazifascismo.</p>
+
+            <div class="quote">
+                «L'insurrezione riuscì a mettere insieme mondi diversi. C'erano i comunisti, la parte più attiva, ma anche gli altri mondi erano ben rappresentati: liberali, cattolici, azionisti. Tanti sacerdoti pagarono con la vita la loro scelta di stare a fianco delle loro comunità.»
+                <strong>— Prof. Paolo Pezzino</strong>
+            </div>
+
+            <p>E non solo chi prese le armi: chi nascose un partigiano in cantina, chi portò del cibo, chi non denunciò un ebreo. Resistere non aveva una sola forma.</p>
+        </div>
+
+        <!-- LE DONNE -->
+        <div class="story-box">
+            <div class="story-title">👩 Le donne: il volto dimenticato della Resistenza</div>
+            <p>Alla Bolognina, a Bologna, c'è un grande murale dedicato a <strong>Edera De Giovanni</strong>: arrestata, torturata e fucilata. Aveva <strong>19 anni</strong> e faceva la mugnaia. Non era un'intellettuale, non era una politica. Era una ragazza che aveva detto no.</p>
+            <p>Solo in provincia di Bologna, le partigiane cadute furono <strong>128</strong>. Vera Vassalle, Anna Maria Enriques Agnoletti, Carla Capponi: tutte medaglie d'oro al valor militare. Studentesse, maestre, figlie di operai e contadini.</p>
+            <p>Eppure, dopo la Liberazione, molte di loro tornarono nell'ombra. Il pregiudizio che la guerra fosse «roba da uomini» si fece sentire anche nella vittoria: poche parteciparono ai lavori della Costituente. Ci sono voluti decenni per riconoscere il loro contributo.</p>
+        </div>
+
+        <!-- RESISTENZA E REPUBBLICA -->
+        <div class="section green">
+            <div class="section-header">
+                <span class="section-emoji">🗳️</span>
+                <div>
+                    <div class="section-title">Senza il 25 Aprile, l'Italia sarebbe rimasta Monarchia</div>
+                    <div class="section-subtitle">Il filo che lega Liberazione e Repubblica</div>
+                </div>
+            </div>
+            <p>Il <strong>2 giugno 1946</strong> gli italiani votarono tra Monarchia e Repubblica. Vinse la Repubblica — ma di misura, e soprattutto dove la guerra di Liberazione era stata più lunga e intensa: il Centro-Nord votò Repubblica con oltre il 54%. Il Sud, dove gli Alleati avevano liberato il territorio prima e senza una vera Resistenza interna, votò Monarchia.</p>
+            <div class="quote">
+                «Senza la Resistenza e senza il 25 Aprile, il 2 giugno la Repubblica non avrebbe vinto.»
+                <strong>— Prof. Paolo Pezzino</strong>
+            </div>
+            <p>Il nesso è diretto: chi aveva lottato per la libertà votò la Repubblica. La democrazia italiana nacque da quella scelta collettiva.</p>
+        </div>
+
+        <!-- DATI -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <span class="stat-emoji">👩</span>
+                <span class="stat-number">128</span>
+                <div class="stat-label">Partigiane cadute solo nella provincia di Bologna</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">🗓️</span>
+                <span class="stat-number">8 sett. '43</span>
+                <div class="stat-label">Armistizio: inizia la Resistenza partigiana</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">🗳️</span>
+                <span class="stat-number">54%</span>
+                <div class="stat-label">Voti alla Repubblica nel Centro-Nord il 2 giugno 1946</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">📅</span>
+                <span class="stat-number">81 anni</span>
+                <div class="stat-label">Dalla Liberazione del 25 aprile 1945 ad oggi</div>
+            </div>
+        </div>
+
+        <!-- LA DOMANDA DIFFICILE: SALÒ -->
+        <div class="section orange">
+            <div class="section-header">
+                <span class="section-emoji">⚖️</span>
+                <div>
+                    <div class="section-title">La domanda scomoda: e i caduti di Salò?</div>
+                    <div class="section-subtitle">Si può commemorare chi combatté dalla parte sbagliata?</div>
+                </div>
+            </div>
+            <p>Il presidente del Senato Ignazio La Russa ha dichiarato che è giusto commemorare anche i <strong>caduti della Repubblica di Salò</strong>. La domanda fa discutere ogni anno. Pezzino risponde in modo netto, ma senza demonizzare le persone:</p>
+
+            <div class="quote">
+                «Non si può celebrare la Resistenza se si è nostalgici del fascismo. È come se in Germania oggi celebrassero contemporaneamente i giovani della Rosa Bianca che si opposero a Hitler e i morti delle SS sul fronte orientale. Se lo immagina?»
+                <strong>— Prof. Paolo Pezzino</strong>
+            </div>
+
+            <p>La <span class="hl">pietà umana</span> per i morti è una cosa. La <span class="hl">commemorazione politica</span> è un'altra. I soldati della RSI non erano semplicemente «giovani illusi»: molti erano fascisti della prima ora, e combattevano di fatto per consegnare l'Italia alla Germania. Equipararli ai partigiani, dice Pezzino, non è imparzialità: è confusione morale.</p>
+        </div>
+
+        <!-- CHI ERA LA ROSA BIANCA -->
+        <div class="context-box">
+            <div class="box-title">📖 Chi era la Rosa Bianca?</div>
+            <p>Un gruppo di studenti universitari tedeschi che distribuì volantini contro Hitler a Monaco nel 1943. I fratelli Hans e Sophie Scholl vennero arrestati, processati e ghigliottinati in pochi giorni. Avevano 24 e 21 anni. Pezzino li cita come esempio di resistenza morale autentica — l'opposto dei soldati delle SS.</p>
+        </div>
+
+        <!-- WORD CLOUD -->
+        <div class="section purple">
+            <div class="section-header">
+                <span class="section-emoji">🔑</span>
+                <div>
+                    <div class="section-title">Le parole chiave di questo 25 Aprile</div>
+                </div>
+            </div>
+            <div class="word-cloud">
+                <span class="word-tag tag-red">✊ Resistenza</span>
+                <span class="word-tag tag-blue">🗳️ Repubblica</span>
+                <span class="word-tag tag-green">👩 Donne partigiane</span>
+                <span class="word-tag tag-orange">⛪ Sacerdoti</span>
+                <span class="word-tag tag-dark">📜 Costituzione</span>
+                <span class="word-tag tag-red">🇩🇪 Occupazione nazista</span>
+                <span class="word-tag tag-blue">⚖️ Memoria</span>
+                <span class="word-tag tag-green">🕊️ Libertà</span>
+                <span class="word-tag tag-orange">🏴 Repubblica di Salò</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>Articolo originale su <strong>Avvenire</strong>, 25 aprile 2026<br>Intervista allo storico Paolo Pezzino a cura di Diego Motta</p>
+        <a href="https://www.avvenire.it/attualita/la-resistenza-fu-fenomeno-di-popolo-i-caduti-di-salo-no-a-nostalgie-del-fascismo_107585">→ Leggi l'articolo completo su Avvenire</a>
+    </div>
+
+</div>
+</body>
+</html>
