@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Mazzolari: Resistente perché giusto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #2d3436 !important;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 0 40px 0;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3d5a80 60%, #264653 100%);
+            color: #ffffff !important;
+            padding: 36px 24px 32px;
+            text-align: center;
+        }
+
+        .header-label {
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #a8c6d8 !important;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        .header-icon {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 1.55em;
+            font-weight: 800;
+            color: #ffffff !important;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+
+        .header .subtitle {
+            font-size: 0.95em;
+            font-style: italic;
+            color: #c8dde8 !important;
+            line-height: 1.5;
+        }
+
+        .date-badge {
+            display: inline-block;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.15);
+            color: #ffffff !important;
+            font-size: 0.8em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 20px 16px 0;
+        }
+
+        /* INTRO PERSONA */
+        .persona-box {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-radius: 14px;
+            padding: 22px 20px;
+            margin-top: 20px;
+            margin-bottom: 18px;
+        }
+
+        .persona-box .p-label {
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a8c6d8 !important;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .persona-box h2 {
+            font-size: 1.15em;
+            font-weight: 800;
+            color: #ffffff !important;
+            margin-bottom: 10px;
+        }
+
+        .persona-box p {
+            font-size: 0.92em;
+            color: #dde6ec !important;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .persona-box p:last-child { margin-bottom: 0; }
+
+        .persona-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            color: #c8dde8 !important;
+            font-size: 0.78em;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 3px 3px 0 0;
+        }
+
+        /* CONTEXT BOX */
+        .context-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+            border-left: 5px solid #f39c12;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 18px;
+        }
+
+        .context-box .box-title {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: #856404 !important;
+            margin-bottom: 10px;
+        }
+
+        .context-box p {
+            font-size: 0.92em;
+            color: #5d4037 !important;
+            line-height: 1.65;
+            margin-bottom: 8px;
+        }
+
+        .context-box p:last-child { margin-bottom: 0; }
+
+        /* SECTIONS */
+        .section {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            border-left: 5px solid #667eea;
+        }
+
+        .section.blue   { border-left-color: #3d5a80; }
+        .section.red    { border-left-color: #c0392b; }
+        .section.green  { border-left-color: #27ae60; }
+        .section.gold   { border-left-color: #d4a017; }
+        .section.purple { border-left-color: #8e44ad; }
+        .section.teal   { border-left-color: #1abc9c; }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .section-emoji {
+            font-size: 1.8em;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .section-title {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #2d3436 !important;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: 0.82em;
+            color: #636e72 !important;
+            margin-top: 3px;
+            font-style: italic;
+        }
+
+        .section p {
+            font-size: 0.93em;
+            color: #2d3436 !important;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .section p:last-child { margin-bottom: 0; }
+
+        /* QUOTE */
+        .quote {
+            background: #f0f7ff;
+            border-left: 5px solid #3d5a80;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 14px 0;
+            font-style: italic;
+            color: #1a3a5c !important;
+            font-size: 0.94em;
+            line-height: 1.7;
+        }
+
+        .quote.gold-q {
+            background: #fff3cd;
+            border-left-color: #d4a017;
+            color: #856404 !important;
+        }
+
+        .quote strong {
+            display: block;
+            margin-top: 8px;
+            font-style: normal;
+            font-size: 0.82em;
+            color: #636e72 !important;
+        }
+
+        /* STORY BOX */
+        .story-box {
+            background: linear-gradient(135deg, #eaf4fb 0%, #d6eaf8 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid #aed6f1;
+        }
+
+        .story-box .story-title {
+            font-size: 0.78em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: #1a5276 !important;
+            margin-bottom: 10px;
+        }
+
+        .story-box p {
+            font-size: 0.93em;
+            color: #1a3a5c !important;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .story-box p:last-child { margin-bottom: 0; }
+
+        /* STAT GRID */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 14px 12px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .stat-card .stat-emoji {
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .stat-card .stat-number {
+            font-size: 1.15em;
+            font-weight: 800;
+            color: #2c3e50 !important;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.78em;
+            color: #636e72 !important;
+            margin-top: 4px;
+            line-height: 1.35;
+        }
+
+        /* HIGHLIGHT */
+        .hl {
+            background: #ffeaa7;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3436 !important;
+        }
+
+        .hl-blue {
+            background: #d6eaf8;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1a3a5c !important;
+        }
+
+        /* QUESTION BOX */
+        .question-box {
+            background: linear-gradient(135deg, #2c3e50 0%, #3d5a80 100%);
+            border-radius: 14px;
+            padding: 24px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(44,62,80,0.3);
+        }
+
+        .question-box .q-emoji {
+            font-size: 2.2em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .question-box p {
+            color: #ffffff !important;
+            font-size: 1em;
+            line-height: 1.65;
+            font-style: italic;
+        }
+
+        .question-box .q-label {
+            display: inline-block;
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a8c6d8 !important;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* DIVIDER */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #dfe6e9, transparent);
+            margin: 6px 0 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #2d3436;
+            color: #b2bec3 !important;
+            padding: 24px 20px;
+            text-align: center;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .footer p {
+            font-size: 0.85em;
+            color: #b2bec3 !important;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #74b9ff !important;
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 0.82em;
+        }
+
+        .footer .firma {
+            margin-top: 16px;
+            font-size: 0.9em;
+            color: #dfe6e9 !important;
+            font-style: italic;
+        }
+
+        .footer .rassegna-label {
+            font-size: 0.72em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #636e72 !important;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.3em; }
+            .stat-grid { grid-template-columns: 1fr 1fr; }
+            .content { padding: 14px 12px 0; }
+            .section { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-label">Rassegna Stampa</div>
+        <span class="header-icon">✝️</span>
+        <h1>«Resistente perché giusto»</h1>
+        <p class="subtitle">Don Primo Mazzolari e il 25 Aprile:<br>quando la fede diventa coraggio civile</p>
+        <span class="date-badge">25 aprile 2026 · Città Nuova</span>
+    </div>
+
+    <div class="content">
+
+        <!-- CHI ERA MAZZOLARI -->
+        <div class="persona-box">
+            <span class="p-label">👤 Chi era don Primo Mazzolari</span>
+            <h2>Il parroco di Bozzolo che non si arrese</h2>
+            <p>Don Primo Mazzolari (1890–1959) fu un sacerdote cattolico della provincia di Cremona, parroco per decenni a <strong>Bozzolo</strong>, un paese del Mantovano. Da lì, dal pulpito di una piccola chiesa di campagna, la sua voce raggiunse tutta l'Italia — e non sempre piacque alle autorità ecclesiastiche.</p>
+            <p>Era un prete scomodo: scrisse di pace, di poveri, di guerra, di democrazia. Visse due guerre mondiali e la dittatura fascista in prima persona. Rischiò la vita. Non si piegò.</p>
+            <p>Paolo VI, futuro papa, disse di lui: <em>«Aveva il passo troppo lungo e noi si stentava a tenergli dietro. Così ha sofferto lui e abbiamo sofferto anche noi. Questo è il destino dei profeti.»</em> Oggi è aperta la sua causa di beatificazione.</p>
+            <div style="margin-top: 12px;">
+                <span class="persona-tag">⛪ Sacerdote diocesano</span>
+                <span class="persona-tag">✍️ Scrittore e giornalista</span>
+                <span class="persona-tag">🕊️ Pacifista</span>
+                <span class="persona-tag">🔥 Resistente</span>
+                <span class="persona-tag">📖 Causa di beatificazione aperta</span>
+            </div>
+        </div>
+
+        <!-- CONTESTO STORICO -->
+        <div class="context-box">
+            <div class="box-title">📚 Contesto — cosa succedeva in Italia</div>
+            <p><strong>1940–1945</strong>: L'Italia è in guerra. Prima alleata di Hitler, poi — dopo l'8 settembre 1943 — spaccata in due: al Sud gli Alleati, al Nord i tedeschi con la Repubblica di Salò di Mussolini. I partigiani combattono nelle campagne e nelle città. I civili cercano di sopravvivere tra rastrellamenti, fame e paura.</p>
+            <p>Per i sacerdoti era un momento di scelta impossibile: obbedire alle autorità, tacere, o seguire la propria coscienza? Molti scelsero il silenzio. Alcuni, come don Mazzolari, scelsero diversamente.</p>
+        </div>
+
+        <!-- LA RESISTENZA DI MAZZOLARI -->
+        <div class="section blue">
+            <div class="section-header">
+                <span class="section-emoji">✊</span>
+                <div>
+                    <div class="section-title">Una resistenza fatta di azioni concrete</div>
+                    <div class="section-subtitle">Non solo parole — ma scelte rischiose, in carne e ossa</div>
+                </div>
+            </div>
+            <p>Mazzolari non prese le armi. Ma la sua resistenza fu reale e rischiosa. Dopo la caduta del fascismo il <strong>25 luglio 1943</strong>, si adoperò attivamente per evitare che in paese si scatenassero rappresaglie contro i fascisti locali — proteggendo anche i suoi avversari.</p>
+            <p>Nel <strong>1944</strong> fu arrestato due volte con l'accusa di collaborare con i partigiani. Rimase fedele alla sua scelta. Trovò rifugio, si nascose. Continuò a scrivere e a predicare dove poteva.</p>
+            <div class="quote">
+                «Il rapporto del sacerdote cremonese con il carcere affonda le radici nell'esperienza personale: per ben due volte fu arrestato nel 1944 con l'accusa di collaborare con i partigiani.»
+                <strong>— Vatican News</strong>
+            </div>
+            <p>Quando il <strong>25 aprile 1945</strong> Bozzolo fu liberata e i partigiani entrarono in paese, don Primo poté finalmente uscire dal suo rifugio. Ma la prima cosa che fece non fu festeggiare: celebrò la Messa per i fascisti sconfitti.</p>
+        </div>
+
+        <!-- IL GESTO DEL 25 APRILE -->
+        <div class="story-box">
+            <div class="story-title">🕯️ Il gesto che nessuno si aspettava</div>
+            <p>Dopo la Liberazione, in tutta Italia si moltiplicavano le vendette. I conti da regolare erano tanti, il risentimento accumulato in anni di guerra era enorme. Era il momento della resa dei conti.</p>
+            <p>Don Mazzolari fece l'opposto: <span class="hl-blue">fu tra i primi a celebrare la Messa per i fascisti</span>. Per lui, l'uomo — anche il nemico, anche il vinto, anche il colpevole — veniva prima della sua appartenenza politica. Non era ingenuità: era una scelta evangelica precisa, costosa, controcorrente.</p>
+            <p>Contribuì in modo decisivo a orientare gli animi verso il perdono, evitando che la fine della guerra si trasformasse nell'inizio di nuove ferite.</p>
+        </div>
+
+        <!-- IL LIBRO TU NON UCCIDERE -->
+        <div class="section gold">
+            <div class="section-header">
+                <span class="section-emoji">📖</span>
+                <div>
+                    <div class="section-title">«Tu non uccidere» — il libro che turbò tutti</div>
+                    <div class="section-subtitle">1955: un prete di campagna contro la guerra giusta</div>
+                </div>
+            </div>
+            <p>Nel <strong>1955</strong>, in piena Guerra Fredda, con il mondo diviso in due blocchi armati di bombe atomiche, Mazzolari pubblicò anonimamente un piccolo libro destinato a fare scandalo: <span class="hl">«Tu non uccidere»</span>.</p>
+            <p>Il titolo era il quinto comandamento. Il contenuto era un attacco diretto alla <em>dottrina della guerra giusta</em> — cioè all'idea, accettata da secoli di teologia, che esista una guerra lecita in nome di Dio o della giustizia. Per Mazzolari, non esisteva.</p>
+            <div class="quote gold-q">
+                «Il nostro dramma di credenti è la fedeltà a Dio, ai pensieri e alle strade di Dio, che non sono i nostri pensieri e le nostre strade. Si tratta di scegliere… Il cristiano è contro ogni male, non fino alla morte del malvagio, ma fino alla propria morte, dato che non c'è amore più grande di quello di mettere la propria vita al servizio del bene e del fratello perduto.»
+                <strong>— Don Primo Mazzolari, «Tu non uccidere»</strong>
+            </div>
+            <p>Le gerarchie ecclesiastiche non apprezzarono. Mazzolari soffrì incomprensioni e silenzi imposti. Le sue idee, però, precorrevano il <strong>Concilio Vaticano II</strong> (1962–65), che avrebbe poi elaborato ufficialmente molte delle posizioni che lui aveva già espresso.</p>
+        </div>
+
+        <!-- COSA SIGNIFICA RESISTENZA CRISTIANA -->
+        <div class="section teal">
+            <div class="section-header">
+                <span class="section-emoji">🕊️</span>
+                <div>
+                    <div class="section-title">Resistere senza odiare — è possibile?</div>
+                    <div class="section-subtitle">Il cuore del messaggio di Mazzolari per oggi</div>
+                </div>
+            </div>
+            <p>L'articolo di Città Nuova pone una domanda precisa: da dove viene la <em>giustizia</em> di Mazzolari? Non dalla politica, non dall'ideologia, non da un calcolo strategico. Viene dal Vangelo.</p>
+            <div class="quote">
+                «A me uomo, a me cristiano, a me sacerdote, la lunga e dolorosa esperienza della guerra e della Resistenza ha restituito la sensibilità evangelica: non c'è che una opposizione al male, non c'è che una resistenza che abbia le promesse di questa e dell'altra vita, quella che si rifiuta di usare, nel resistergli, gli stessi mezzi del male.»
+                <strong>— Don Primo Mazzolari, «Adesso», 15 aprile 1955</strong>
+            </div>
+            <p>La logica è radicale: <span class="hl">non si può combattere il male usando i mezzi del male</span>. Chi odia per combattere l'odio non fa che moltiplicarlo. La vera resistenza è quella che non si lascia contaminare dagli strumenti del nemico.</p>
+            <p>Non è passività. È la scelta più difficile: restare fedeli a ciò che si è, anche quando tutto intorno spinge a diventare qualcosa d'altro.</p>
+        </div>
+
+        <!-- IL PROFETA E LA CHIESA -->
+        <div class="section purple">
+            <div class="section-header">
+                <span class="section-emoji">⛪</span>
+                <div>
+                    <div class="section-title">Un profeta incompreso dalla propria Chiesa</div>
+                    <div class="section-subtitle">Soffrì silenzi e censure — ma aprì strade nuove</div>
+                </div>
+            </div>
+            <p>Mazzolari pagò un prezzo alto per la sua libertà intellettuale. Per anni le gerarchie ecclesiastiche lo guardarono con sospetto. Alcune sue pubblicazioni vennero bloccate o criticate. Predicava di pace quando la Chiesa preferiva non irritare i potenti.</p>
+            <p>Solo verso la fine della sua vita cominciò a ricevere riconoscimenti: nel <strong>1957</strong> l'arcivescovo di Milano Giovanni Battista Montini — futuro <strong>Papa Paolo VI</strong> — lo chiamò a predicare nella propria diocesi. Un gesto di rispetto tardivo, ma significativo.</p>
+            <p>Morì il <strong>12 aprile 1959</strong> a Cremona. Aveva 68 anni. Oggi la sua figura è riscoperta, la causa di beatificazione è aperta, e le sue parole — sulla pace, sui poveri, sulla coscienza — sembrano scritte ieri.</p>
+        </div>
+
+        <!-- DATI / TIMELINE -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <span class="stat-emoji">📅</span>
+                <span class="stat-number">1890</span>
+                <div class="stat-label">Nascita di don Mazzolari a Cremona</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">⛪</span>
+                <span class="stat-number">Bozzolo</span>
+                <div class="stat-label">La sua parrocchia per tutta la vita, nel Mantovano</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">🔒</span>
+                <span class="stat-number">2 volte</span>
+                <div class="stat-label">Arrestato nel 1944 per collaborazione con i partigiani</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-emoji">📖</span>
+                <span class="stat-number">1955</span>
+                <div class="stat-label">Pubblica «Tu non uccidere» contro la guerra giusta</div>
+            </div>
+        </div>
+
+        <!-- MAZZOLARI E DON MILANI -->
+        <div class="context-box">
+            <div class="box-title">🔗 Un nome che ne richiama un altro</div>
+            <p>L'articolo cita anche <strong>don Lorenzo Milani</strong>, il priore di Barbiana che pochi anni dopo ribadì le stesse idee nella <em>Lettera ai cappellani militari</em> (1965). Due preti di campagna, due voci scomode, due profeti che la storia ha poi riabilitato. Se volete un nome da cercare per approfondire: don Lorenzo Milani e la scuola di Barbiana.</p>
+        </div>
+
+        
+
+        <div class="divider"></div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <span class="rassegna-label">Rassegna Stampa</span>
+        <p>Articolo originale su <strong>Città Nuova</strong>, 25 aprile 2026</p>
+        <a href="https://www.cittanuova.it/resistente-perche-giusto-linsegnamento-di-mazzolari/">→ Leggi l'articolo completo su Città Nuova</a>
+        
+    </div>
+
+</div>
+</body>
+</html>
